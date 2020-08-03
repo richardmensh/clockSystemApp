@@ -1,0 +1,43 @@
+PODS:
+  - Alamofire (5.2.1)
+  - AlamofireImage (4.1.0):
+    - Alamofire (~> 5.1)
+  - EzPopup (1.1)
+  - FSCalendar (2.8.1)
+  - Mapbox-iOS-SDK (5.9.0):
+    - MapboxMobileEvents (= 0.10.2)
+  - MapboxMobileEvents (0.10.2)
+  - Moya (14.0.0):
+    - Moya/Core (= 14.0.0)
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
+
+DEPENDENCIES:
+  - AlamofireImage
+  - EzPopup
+  - FSCalendar
+  - Mapbox-iOS-SDK
+  - Moya
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AlamofireImage
+    - EzPopup
+    - FSCalendar
+    - Mapbox-iOS-SDK
+    - MapboxMobileEvents
+    - Moya
+
+SPEC CHECKSUMS:
+  Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
+  AlamofireImage: c4a2ba349885fb3064feb74d2e547bd42ce9be10
+  EzPopup: b959cfb0d70d782a28e770a96c454df0401467c7
+  FSCalendar: 5245140456fcbcac5824c203b98bd8068bdfee1a
+  Mapbox-iOS-SDK: a5915700ec84bc1a7f8b3e746d474789e35b7956
+  MapboxMobileEvents: 2bc0ca2eedb627b73cf403258dce2b2fa98074a6
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+
+PODFILE CHECKSUM: 11f71eecf311dc3004f55bc2875316fe70f38e46
+
+COCOAPODS: 1.9.3

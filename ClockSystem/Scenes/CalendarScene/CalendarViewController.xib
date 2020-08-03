@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalendarViewController" customModule="ClockSystem" customModuleProvider="target">
+            <connections>
+                <outlet property="backButton" destination="u6X-Wr-l5P" id="8xQ-HM-cyZ"/>
+                <outlet property="calendarView" destination="Feg-Ik-qEA" id="vBl-nL-JGO"/>
+                <outlet property="eventTableView" destination="m3a-pj-lDR" id="Goh-EG-eeU"/>
+                <outlet property="titleLabel" destination="ERn-89-2Fi" id="SkM-Jd-hvM"/>
+                <outlet property="view" destination="iN0-l3-epB" id="7DV-or-fwA"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eYj-mN-Oc2">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="107.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ERn-89-2Fi">
+                            <rect key="frame" x="186" y="62" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6X-Wr-l5P">
+                            <rect key="frame" x="20" y="56" width="33" height="33"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="u6X-Wr-l5P" secondAttribute="height" id="wx2-Iw-dIP"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="ERn-89-2Fi" firstAttribute="centerX" secondItem="eYj-mN-Oc2" secondAttribute="centerX" id="6BJ-2l-r30"/>
+                        <constraint firstItem="u6X-Wr-l5P" firstAttribute="centerY" secondItem="eYj-mN-Oc2" secondAttribute="centerY" multiplier="1.35" id="6RP-7X-cnc"/>
+                        <constraint firstItem="u6X-Wr-l5P" firstAttribute="width" secondItem="eYj-mN-Oc2" secondAttribute="width" multiplier="0.08" id="KeN-ZF-iyK"/>
+                        <constraint firstItem="ERn-89-2Fi" firstAttribute="centerY" secondItem="u6X-Wr-l5P" secondAttribute="centerY" id="Qhd-Lg-UU4"/>
+                        <constraint firstItem="u6X-Wr-l5P" firstAttribute="leading" secondItem="eYj-mN-Oc2" secondAttribute="leading" constant="20" id="evb-xH-Dr6"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gk2-sq-4TG">
+                    <rect key="frame" x="0.0" y="107.5" width="414" height="788.5"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Feg-Ik-qEA" customClass="FSCalendar">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="269"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="m3a-pj-lDR">
+                            <rect key="frame" x="0.0" y="279" width="414" height="509.5"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="m3a-pj-lDR" firstAttribute="top" secondItem="Feg-Ik-qEA" secondAttribute="bottom" constant="10" id="61v-8J-fbO"/>
+                        <constraint firstAttribute="bottom" secondItem="m3a-pj-lDR" secondAttribute="bottom" id="QPM-EJ-ZYI"/>
+                        <constraint firstAttribute="trailing" secondItem="Feg-Ik-qEA" secondAttribute="trailing" id="SZQ-HJ-iFt"/>
+                        <constraint firstItem="Feg-Ik-qEA" firstAttribute="leading" secondItem="Gk2-sq-4TG" secondAttribute="leading" id="fwI-wk-ZHo"/>
+                        <constraint firstItem="m3a-pj-lDR" firstAttribute="leading" secondItem="Gk2-sq-4TG" secondAttribute="leading" id="iqp-2v-CRa"/>
+                        <constraint firstItem="Feg-Ik-qEA" firstAttribute="top" secondItem="Gk2-sq-4TG" secondAttribute="top" id="jzI-f4-BhU"/>
+                        <constraint firstAttribute="trailing" secondItem="m3a-pj-lDR" secondAttribute="trailing" id="lzS-HH-G7r"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="eYj-mN-Oc2" secondAttribute="trailing" id="861-FW-yDf"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Gk2-sq-4TG" secondAttribute="trailing" id="8WN-rU-YyP"/>
+                <constraint firstItem="Feg-Ik-qEA" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.3" id="9nl-Hr-UGb"/>
+                <constraint firstItem="eYj-mN-Oc2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="I9j-dy-XpG"/>
+                <constraint firstItem="eYj-mN-Oc2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ONg-Fe-6hw"/>
+                <constraint firstItem="Gk2-sq-4TG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Pl4-EH-Rxf"/>
+                <constraint firstItem="eYj-mN-Oc2" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.12" id="dHX-A3-UOg"/>
+                <constraint firstAttribute="bottom" secondItem="Gk2-sq-4TG" secondAttribute="bottom" id="h3P-Lr-dPO"/>
+                <constraint firstItem="Gk2-sq-4TG" firstAttribute="top" secondItem="eYj-mN-Oc2" secondAttribute="bottom" id="vmD-Hc-8Xs"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="139" y="141"/>
+        </view>
+    </objects>
+</document>

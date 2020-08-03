@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapViewController" customModule="ClockSystem" customModuleProvider="target">
+            <connections>
+                <outlet property="backButton" destination="5nT-LP-aO3" id="8Ut-Xn-Igu"/>
+                <outlet property="mapView" destination="wMa-Iv-B06" id="Ubq-Hc-hxf"/>
+                <outlet property="remindMeLabel" destination="3AO-pC-Q2W" id="ItQ-3m-Heb"/>
+                <outlet property="remindMeSwitch" destination="t9E-Ad-vV3" id="GBv-G9-GCO"/>
+                <outlet property="view" destination="iN0-l3-epB" id="25y-z5-Amb"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RL5-QG-RGM">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="107.5"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5nT-LP-aO3">
+                            <rect key="frame" x="20" y="56" width="33" height="33"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="5nT-LP-aO3" secondAttribute="height" id="0Ia-Br-YUy"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="5nT-LP-aO3" firstAttribute="width" secondItem="RL5-QG-RGM" secondAttribute="width" multiplier="0.08" id="37i-Cz-2WU"/>
+                        <constraint firstItem="5nT-LP-aO3" firstAttribute="centerY" secondItem="RL5-QG-RGM" secondAttribute="centerY" multiplier="1.35" id="D7D-lk-Fmi"/>
+                        <constraint firstItem="5nT-LP-aO3" firstAttribute="leading" secondItem="RL5-QG-RGM" secondAttribute="leading" constant="20" id="TaX-jD-YDh"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wMa-Iv-B06" customClass="MGLMapView">
+                    <rect key="frame" x="0.0" y="107.5" width="414" height="269"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="styleURL__" value="mapbox://styles/richardmensh/cjesee0sh0rw42soo998vzwy7"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3AO-pC-Q2W">
+                    <rect key="frame" x="20" y="396.5" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t9E-Ad-vV3">
+                    <rect key="frame" x="72" y="391.5" width="51" height="31"/>
+                </switch>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="wMa-Iv-B06" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="1sT-hI-ECt"/>
+                <constraint firstItem="wMa-Iv-B06" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.3" id="4mn-YR-q7a"/>
+                <constraint firstItem="RL5-QG-RGM" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.12" id="6bF-ao-kFA"/>
+                <constraint firstItem="t9E-Ad-vV3" firstAttribute="leading" secondItem="3AO-pC-Q2W" secondAttribute="trailing" constant="10" id="Mpu-OQ-Ltz"/>
+                <constraint firstItem="3AO-pC-Q2W" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="NDw-OV-xgK"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="wMa-Iv-B06" secondAttribute="trailing" id="Uv6-5T-KGg"/>
+                <constraint firstItem="RL5-QG-RGM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ccq-25-mEO"/>
+                <constraint firstItem="t9E-Ad-vV3" firstAttribute="centerY" secondItem="3AO-pC-Q2W" secondAttribute="centerY" id="ddG-Xw-CJH"/>
+                <constraint firstItem="wMa-Iv-B06" firstAttribute="top" secondItem="RL5-QG-RGM" secondAttribute="bottom" id="mnI-5S-rvg"/>
+                <constraint firstItem="RL5-QG-RGM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="p7j-D8-qST"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="RL5-QG-RGM" secondAttribute="trailing" id="y5G-Go-LhP"/>
+                <constraint firstItem="3AO-pC-Q2W" firstAttribute="top" secondItem="wMa-Iv-B06" secondAttribute="bottom" constant="20" id="yS4-ag-BFr"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="139" y="108"/>
+        </view>
+    </objects>
+</document>

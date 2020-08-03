@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PickerViewController" customModule="ClockSystem" customModuleProvider="target">
+            <connections>
+                <outlet property="doneButton" destination="Gjn-eF-5bt" id="MRh-UJ-upa"/>
+                <outlet property="pickerView" destination="M1B-7g-lh4" id="NhO-aN-pHH"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="407" height="319"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M1B-7g-lh4">
+                    <rect key="frame" x="0.0" y="23" width="407" height="223"/>
+                </pickerView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gjn-eF-5bt">
+                    <rect key="frame" x="40.5" y="261" width="326" height="48"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="doneButtonPressed:" destination="-1" eventType="touchUpInside" id="GZI-Qd-buS"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="Gjn-eF-5bt" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="BEu-u8-MnO"/>
+                <constraint firstItem="M1B-7g-lh4" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.7" id="Gfu-VH-U1e"/>
+                <constraint firstItem="Gjn-eF-5bt" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.15" id="cAC-zW-bVV"/>
+                <constraint firstItem="Gjn-eF-5bt" firstAttribute="top" secondItem="M1B-7g-lh4" secondAttribute="bottom" constant="15" id="e3E-pE-MxC"/>
+                <constraint firstItem="M1B-7g-lh4" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="gim-OC-nb4"/>
+                <constraint firstItem="M1B-7g-lh4" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="sY7-CS-MI3"/>
+                <constraint firstItem="Gjn-eF-5bt" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.8" id="xzl-FF-L5M"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Gjn-eF-5bt" secondAttribute="bottom" constant="10" id="yGz-9r-LeZ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="132.60869565217394" y="-85.379464285714278"/>
+        </view>
+    </objects>
+</document>
